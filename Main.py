@@ -13,7 +13,6 @@ import os
 def generate_df_affect_by_n_days(series, n, index=False):
     # 过一个序列来生成一个矩阵（用于处理时序的数据）
     # 就是把当天的前n天作为参数，当天的数据作为label
-    # 可以不看
     if len(series) <= n:
         raise Exception("The Length of series is %d, while affect by (n=%d)." % (len(series), n))
     df = pd.DataFrame()
@@ -26,7 +25,7 @@ def generate_df_affect_by_n_days(series, n, index=False):
 
 
 def readData(column='Adj Close', n=30, all_too=True, index=False, train_end=-300):
-    # 从csv读入数据,可以不看
+    # 从csv读入数据
     df = pd.read_csv("韦尔股份603501.ss.csv", index_col=0)
     df.index = list(map(lambda x: datetime.datetime.strptime(x, "%Y-%m-%d"), df.index))
     df_column = df[column].copy()
@@ -39,7 +38,7 @@ def readData(column='Adj Close', n=30, all_too=True, index=False, train_end=-300
 
 def count_dates(predict_days, start_day):
     # 目前仅仅支持月份不变的计算
-    # count_dates只是一个生成日期的函数,可以不看
+    # count_dates只是一个生成日期的函数
     start_date = start_day.split("-")
     year = int(start_date[0])
     month = int(start_date[1])

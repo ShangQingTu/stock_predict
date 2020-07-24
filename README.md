@@ -18,7 +18,7 @@
 | predict_days      | [1,30]       | 整数     | 看需求         |
 | predict_start_day | 随便哪一天   | 日期     | 已经设置了元旦 |
 
-(变量代表的意义见文件`third_question.py`)
+(变量代表的意义见文件`Main.py`)
 
 ## 二、训练集和测试集的区别
 

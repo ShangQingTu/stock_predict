@@ -1,7 +1,7 @@
 import torch.nn as nn
 class RNN(nn.Module):
     def __init__(self, input_size):
-        #这一句是继承,可以忽略
+        #这一句是继承
         super(RNN, self).__init__()
         #定义rnn层为LSTM,设置输入大小,隐含层大小等参数
         self.rnn = nn.LSTM(
